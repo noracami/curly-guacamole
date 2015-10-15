@@ -28,6 +28,11 @@ pip install -U pip
 export DJANGO_SETTINGS_MODULE=djangoconnectiondashboard.settings.local
 ```
 
+```
+# Get the latest official version
+pip install Django==1.8.5
+```
+
 ``` bash
 # Run this from your terminal:
 # Please ensure that you have Ruby installed.
