@@ -23,12 +23,12 @@ deactivate
 source ./venv/bin/activate
 ```
 
-```
+``` bash
 pip install -U pip
-export DJANGO_SETTINGS_MODULE=djangoconnectiondashboard.settings.local
+export DJANGO_SETTINGS_MODULE=curly-guacamole.settings.local
 ```
 
-```
+``` bash
 # Get the latest official version
 pip install Django==1.8.5
 ```
@@ -39,13 +39,18 @@ pip install Django==1.8.5
 wget -qO- https://toolbelt.heroku.com/install-ubuntu.sh | sh
 ```
 
-```
-python manage.py runserver 0.0.0.0:8008
+``` bash
+django-admin startproject curly-guacamole
+python manage.py startapp 'app'
 ```
 
-```
-django-admin startproject djangoconnectiondashboard
-python manage.py startapp teams
+## basic command
+
+``` bash
+$ python manage.py makemigrations 'app'
+$ python manage.py sqlmigrate 'app' ####
+$ python manage.py migrate
+$ python manage.py runserver 0.0.0.0:8010
 ```
 
 It is easy to use Python with forever.js:
