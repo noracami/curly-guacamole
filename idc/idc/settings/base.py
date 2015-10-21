@@ -16,9 +16,7 @@ from django.core.exceptions import ImproperlyConfigured
 from django.core.urlresolvers import reverse_lazy
 
 # BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(
-    os.path.abspath(__file__)
-)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -36,6 +34,8 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
+    'base',
+    'workers',
     'shift_tables',
     'django.contrib.admin',
     'django.contrib.auth',

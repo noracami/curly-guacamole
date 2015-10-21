@@ -1,0 +1,14 @@
+{% extends 'shift_tables/base.html' %}
+{% load staticfiles %}
+
+{% block title %}店家列表 | {{ block.super }}{% endblock title %}
+
+{% block content %}
+<div class="controls">
+  <a href="" class="btn btn-default">建立店家</a>
+</div>
+{% endblock content %}
+
+{% block js %}
+<script src="{% static 'stores/js/store_list.js' %}"></script>
+{% endblock js %}
