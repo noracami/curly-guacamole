@@ -9,21 +9,21 @@ class Shift(models.Model):
     # 日期, 輪值人員, 代班人員, 確認
     date = models.DateField('日期', auto_now_add=True)
     is_holiday = models.BooleanField('例假日')
-    worker = models.ForeignKey('workers.Worker', related_name='shifts_worker')
-    substitute = models.ForeignKey('workers.Worker', related_name='shifts_substitute')
-    confirm = models.ForeignKey('workers.Worker', related_name='shifts_confirm')
+    worker = models.ForeignKey('workers.Worker', related_name='shifts_worker', blank=True, null=True)
+    substitute = models.ForeignKey('workers.Worker', related_name='shifts_substitute', blank=True, null=True)
+    confirm = models.ForeignKey('workers.Worker', related_name='shifts_confirm', blank=True, null=True)
 
     class Meta:
         verbose_name = '班'
 
     def __str__(self):
-        return self.date
+        return '%s' % self.date
 
 class Table(models.Model):
     # month, shifts, worker, supervisor
     date = models.DateField('日期')
-    worker = models.ForeignKey('workers.Worker', related_name='table_worker')
-    supervisor = models.ForeignKey('workers.Worker', related_name='table_supervisor')
+    worker = models.ForeignKey('workers.Worker', related_name='table_worker', blank=True, null=True)
+    supervisor = models.ForeignKey('workers.Worker', related_name='table_supervisor', blank=True, null=True)
 
     class Meta:
         verbose_name = '每月輪值表'

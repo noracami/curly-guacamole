@@ -5,5 +5,4 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.shift_list, name='shift_list'),
-    url(r'^admin/', include(admin.site.urls)),
 ]
