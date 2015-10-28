@@ -1,5 +1,6 @@
 from django.conf import settings
 from django.db import models
+from django.utils import timezone
 
 # Create your models here.
 #class Store(models.Model):
@@ -7,7 +8,7 @@ from django.db import models
 
 class Shift(models.Model):
     # 日期, 輪值人員, 代班人員, 確認
-    date = models.DateField('日期', auto_now_add=True)
+    date = models.DateField('日期', default=timezone.now)
     is_holiday = models.BooleanField('例假日')
     worker = models.ForeignKey('workers.Worker', related_name='shifts_worker', blank=True, null=True)
     substitute = models.ForeignKey('workers.Worker', related_name='shifts_substitute', blank=True, null=True)
