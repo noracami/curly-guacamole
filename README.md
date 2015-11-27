@@ -25,7 +25,7 @@ source ./venv/bin/activate
 
 ``` bash
 pip install -U pip
-export DJANGO_SETTINGS_MODULE=curly-guacamole.settings.local #add at the last line
+export DJANGO_SETTINGS_MODULE=idc.settings.local #add at the last line
 ```
 
 ``` bash
