@@ -73,3 +73,16 @@ Now use that script with forever:
 ``` bash
 forever start -c ./python_virtualenv python_script.py
 ```
+
+---
+
+``` bash
+#!/bin/bash
+# Script to run a Python file using the local virtualenv
+source ./venv/bin/activate
+./venv/bin/python $@
+```
+
+``` bash
+forever start -c ./python_virtualenv runserver
+```
