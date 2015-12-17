@@ -1,5 +1,7 @@
 # curly-guacamole
 
+uranusjr/django-tutorial-for-programmers
+
 ``` bash
 # Mac$
 python3 -m venv venv
