@@ -24,6 +24,11 @@ source ./venv/bin/activate
 ```
 
 ``` bash
+virtualenv venv
+```
+
+
+``` bash
 pip install -U pip
 export DJANGO_SETTINGS_MODULE=idc.settings.local #add at the last line
 ```
@@ -53,7 +58,7 @@ $ python manage.py migrate
 $ python manage.py runserver 0.0.0.0:8010
 ```
 
-It is easy to use Python with forever.js:
+It is easy to use Python with [forever.js](https://github.com/foreverjs/forever):
 
 ``` bash
 forever start -c python python_script.py
@@ -74,7 +79,12 @@ Now use that script with forever:
 forever start -c ./python_virtualenv python_script.py
 ```
 
----
+
+## 建立 superuser
+
+``` python
+python manage.py createsuperuser
+```
 
 ``` bash
 #!/bin/bash
