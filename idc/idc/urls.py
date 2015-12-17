@@ -19,5 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^shift_tables/', include('shift_tables.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^accounts/', include('django.contrib.auth.urls')),
     url(r'^$', 'base.views.home', name='home'),
 ]

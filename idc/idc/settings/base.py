@@ -37,6 +37,7 @@ INSTALLED_APPS = (
     'base',
     'workers',
     'shift_tables',
+    'crispy_forms',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -117,3 +118,5 @@ def get_env_var(key):
         raise ImproperlyConfigured(
             'Environment variable {key} required.'.format(key=key)
         )
+
+CRISPY_TEMPLATE_PACK = 'bootstrap3'

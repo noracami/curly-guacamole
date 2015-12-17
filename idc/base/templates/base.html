@@ -54,6 +54,16 @@
             <a href="#">機房日誌</a>
           </li>
         </ul>
+        {# base/templates/base.html #}
+        <form class="navbar-right navbar-form" method="post" action="{% url 'logout' %}">
+          {% if user.is_authenticated %}
+          {% csrf_token %}
+          <input type="hidden" name="next" value="{% url 'home' %}">
+          <button class="btn btn-default" type="submit">登出</button>
+          {% else %}
+          <a class="btn btn-default" href="{% url 'login' %}">登入</a>
+          {% endif %}
+        </form>
       </div>
       <!-- /.navbar-collapse -->
     </div>
