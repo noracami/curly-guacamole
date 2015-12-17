@@ -1,6 +1,6 @@
 # curly-guacamole
 
-uranusjr/django-tutorial-for-programmers
+[django-tutorial-for-programmers](https://github.com/uranusjr/django-tutorial-for-programmers)
 
 ``` bash
 # Mac$
